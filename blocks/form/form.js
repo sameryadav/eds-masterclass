@@ -32,11 +32,12 @@ function generatePayload(form) {
   [...form.elements].forEach((field) => {
     if (field.name && field.type !== 'submit' && !field.disabled) {
       if (field.type === 'radio') {
-        if (field.checked) payload[field.name] = field.value;
+        if (field.checked) payload[field.name] = window.DOMPurify ? window.DOMPurify.sanitize(field.value) : field.value;
       } else if (field.type === 'checkbox') {
-        if (field.checked) payload[field.name] = payload[field.name] ? `${payload[field.name]},${field.value}` : field.value;
+        const sanitizedValue = window.DOMPurify ? window.DOMPurify.sanitize(field.value) : field.value;
+        if (field.checked) payload[field.name] = payload[field.name] ? `${payload[field.name]},${sanitizedValue}` : sanitizedValue;
       } else {
-        payload[field.name] = field.value;
+        payload[field.name] = window.DOMPurify ? window.DOMPurify.sanitize(field.value) : field.value;
       }
     }
   });
