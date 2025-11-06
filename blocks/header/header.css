@@ -36,7 +36,8 @@ header nav[aria-expanded='true'] {
     justify-content: space-between;
     gap: 0 32px;
     max-width: 1264px;
-    padding: 0 32px;
+    padding: 16px 32px; /* increased padding causes taller nav */
+    height: 80px; /* actual height is 80px, but --nav-height is still 64px */
   }
 
   header nav[aria-expanded='true'] {
