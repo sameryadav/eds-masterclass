@@ -13,6 +13,7 @@ export default async function decorate(block) {
     decorateBlock(videoBlock);
 
     videoBlock.classList.add('hero-background-video');
+
     loadBlock(videoBlock);
   }
 }

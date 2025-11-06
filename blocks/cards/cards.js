@@ -1,7 +1,4 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
-  /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
@@ -13,8 +10,16 @@ export default function decorate(block) {
     ul.append(li);
   });
 
-  // replace images with optimized versions
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+  ul.querySelectorAll('picture > img').forEach((img) => {
+    const newImg = document.createElement('img');
+    const url = new URL(img.src);
+    url.searchParams.set('width', '2000');
+    newImg.src = url.toString();
+    newImg.alt = img.alt;
+    newImg.loading = 'lazy';
+
+    img.closest('picture').replaceWith(newImg);
+  });
 
   block.replaceChildren(ul);
 }
