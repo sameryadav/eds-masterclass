@@ -7,3 +7,14 @@ helix-importer-ui
 .DS_Store
 *.bak
 .idea
+
+# Import analysis screenshots
+tools/importer/screenshots/
+
+# Temporary test files (throwaway tests and test content)
+test/tmp/
+drafts/tmp/
+.playwright-mcp/
+
+# skills caches
+.cache/
