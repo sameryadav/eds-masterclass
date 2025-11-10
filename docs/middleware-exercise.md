@@ -25,8 +25,6 @@ Middleware acts as an intermediary between your browser and backend APIs:
 
 ## Getting Started
 
-**Branch:** `middleware`
-
 **Prerequisites:**
 1. Cloudflare account: https://dash.cloudflare.com/
 2. Wrangler CLI: `npm install -g wrangler` (or use `npx`)
