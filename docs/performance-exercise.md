@@ -20,7 +20,7 @@ This exercise helps you identify and fix common performance issues in Edge Deliv
 3. Chrome DevTools (for performance analysis)
 4. PageSpeed Insights access: https://pagespeed.web.dev/
 
-**Test Page:** After forking and deploying, use your fork's URL:
+**Test Page:** After creating a DA Page, forking and deploying, use your fork's URL:
 `https://performance--YOUR_REPO--YOUR_ORG.aem.live/performance`
 
 ## Exercise Steps
@@ -51,7 +51,7 @@ This exercise helps you identify and fix common performance issues in Edge Deliv
 2. **Create a new page** at the `/performance` path
 3. **Get the page content:**
    - Go to: https://main--eds-masterclass--cloudadoption.aem.page/performance
-   - Use the "View Document Source" function of the Sidekick
+   - Use the "View Document Source" function by right-clicking the Sidekick App Icon in your browser
    - Click the copy button
    - Paste into the DA page you just created
 4. **Preview the page** to ensure it loads correctly
