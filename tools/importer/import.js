@@ -12,18 +12,6 @@
 /* global WebImporter */
 /* eslint-disable no-console, class-methods-use-this */
 
-/*const handleBlogPosts = (main, metadata) => {
-  const isBlogPost = main.querySelector('.blog-header');
-
-  if (isBlogPost) {
-    const article = main.querySelector('article');
-    if (article) {
-      const date = article.querySelector('time');
-      metadata.Date = date.innerText;
-    }
-  }
-};*/
-
 const handleBlogPosts = (main, metadata) => {
   const isBlogPost = main.querySelector('.blog-header');
 
