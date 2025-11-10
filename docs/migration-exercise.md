@@ -82,8 +82,7 @@ curl -X PUT https://admin.hlx.page/config/{org}/sites/{site}/content/query.yaml 
 ```
 
 - Then, go to https://labs.aem.live/tools/index-admin/index.html to review your index config.
-- Add a second index called `blog` using the index admin tool.
-    - Value for `include` should be `/blog/**`  
+- Value for `include` should be `/blog/**`
 
 ## Step 4: Create sitemaps pointing to their indices
 - Go to https://labs.aem.live/tools/sitemap-admin/index.html

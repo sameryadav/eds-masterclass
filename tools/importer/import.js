@@ -24,21 +24,6 @@ const handleBlogPosts = (main, metadata) => {
   }
 };
 
-const handleImages = (main) => {
-  const images = main.querySelectorAll('img');
-  images.forEach((img) => {
-    const newImg = document.createElement('img');
-    try {
-      const imgUrl = new URL(img.src);
-      const { pathname, search, hash } = imgUrl;
-      newImg.src = `${pathname}${search}${hash}`;
-    } catch (e) {
-      newImg.src = img.src;
-    }
-    img.replaceWith(newImg);
-  });
-};
-
 export default {
   /**
    * Apply DOM operations to the provided document and return
@@ -70,7 +55,7 @@ export default {
     const metadataBlock = WebImporter.Blocks.getMetadataBlock(document, metadata);
     main.append(metadataBlock);
 
-    handleImages(main);
+    WebImporter.rules.adjustImageUrls(main, url, params.originalURL);
 
     const ret = [];
 

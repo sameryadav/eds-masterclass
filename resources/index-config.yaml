@@ -9,6 +9,7 @@ indices:
       - /fragments/**
       - /library/**
       - /modals/**
+      - /blogs/**
     target: /query-index.json
     properties:
       title:

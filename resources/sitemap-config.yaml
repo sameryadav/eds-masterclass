@@ -4,7 +4,9 @@ sitemaps:
     source: /query-index.json
     destination: /sitemap.xml
     lastmod: YYYY-MM-DD
+    origin: https://deno.com
   blog-sitemap:
     source: /blog-index.json
     destination: /blog-sitemap.xml
     lastmod: YYYY-MM-DD
+    origin: https://deno.com
